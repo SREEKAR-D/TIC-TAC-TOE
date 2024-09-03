@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4; /* Neutral background color for the page */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Game Container */
+.game-container {
+    text-align: center;
+    background: #ffffff; /* White background for the game container */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 500px; /* Adjusted width for better utilization */
+    box-sizing: border-box;
+}
+
+/* Header */
+h1 {
+    margin: 0;
+    font-size: 28px; /* Larger font size */
+    color: #333;
+}
+
+/* Status and Result */
+#status {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#result {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c; /* Red for the result */
+    margin-top: 10px;
+}
+
+/* Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 100%;
+    aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+}
+
+/* Cells */
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px; /* Increased font size */
+    font-weight: bold;
+    color: #fff;
+    background: #87ceeb; /* Sky blue background for cells */
+    border: 3px solid #00bfff; /* Light blue border */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    background-color: #00bfff; /* Darker sky blue on hover */
+    border-color: #1e90ff; /* Even darker blue border on hover */
+    transform: scale(1.05);
+}
+
+.cell.X {
+    background-color: #ff6347; /* Tomato color for X */
+}
+
+.cell.O {
+    background-color: #32cd32; /* Lime green color for O */
+}
+
+/* Button */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #2ecc71; /* Green background */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 8px;
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 36px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
